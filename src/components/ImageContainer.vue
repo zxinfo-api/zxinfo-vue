@@ -194,7 +194,7 @@ export default {
     if (this.isScrFile) {
       if (this.$isDevelopment) console.log(`ImageContainer - .SCR found: ${this.item.scrUrl}`);
       // load .SCR file into scrdata;
-      const scrURL = `https://zxinfo.dk/media${this.item.scrUrl}`;
+      const scrURL = `/media${this.item.scrUrl}`;
       axios.get(scrURL, { responseType: "arraybuffer" }).then((response) => {
         const bytes = Array.from(new Uint8Array(response.data));
         this.loadScreen(bytes);

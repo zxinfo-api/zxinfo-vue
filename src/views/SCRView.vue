@@ -74,16 +74,16 @@
               <v-card-text>
                 <ul>
                   <li>
-                    <a :href="$api_base_url3 + '/scr/files/' + encodeURIComponent(r.png.filename)">{{ r.png.filename }}</a>
+                    <a :href="$api_base_url + '/scr/files/' + encodeURIComponent(r.png.filename)">{{ r.png.filename }}</a>
                   </li>
                   <li>
-                    <a :href="$api_base_url3 + '/scr/files/' + encodeURIComponent(r.s81.filename)">{{ r.s81.filename }}</a>
+                    <a :href="$api_base_url + '/scr/files/' + encodeURIComponent(r.s81.filename)">{{ r.s81.filename }}</a>
                   </li>
                   <li>
-                    <a :href="$api_base_url3 + '/scr/files/' + encodeURIComponent(r.scr.filename)">{{ r.scr.filename }}</a>
+                    <a :href="$api_base_url + '/scr/files/' + encodeURIComponent(r.scr.filename)">{{ r.scr.filename }}</a>
                   </li>
                   <li>
-                    <a :href="$api_base_url3 + '/scr/files/' + encodeURIComponent(r.txt.filename)">{{ r.txt.filename }}</a>
+                    <a :href="$api_base_url + '/scr/files/' + encodeURIComponent(r.txt.filename)">{{ r.txt.filename }}</a>
                   </li>
                 </ul>
               </v-card-text></v-card-text
@@ -104,7 +104,7 @@
                 <v-img class="black--text align-end" :max-width="r.png.width" :src="r.png.base64"></v-img><v-card-subtitle>{{ r.png.filename }} ({{ r.png.width }}x{{ r.png.height }})</v-card-subtitle>
                 <v-card-text class="caption">Original image copied pixel-by-pixel and saved as PNG. Cleaned for e.g. TV artefacts added by EightyOne.</v-card-text>
                 <v-card-actions>
-                  <v-btn icon :href="$api_base_url3 + '/scr/files/' + r.png.filename">
+                  <v-btn icon :href="$api_base_url + '/scr/files/' + r.png.filename">
                     <v-icon>mdi-download</v-icon>
                   </v-btn></v-card-actions
                 ></v-card
@@ -112,13 +112,13 @@
             </v-slide-item>
             <v-slide-item v-slot:default="{ active, toggle }"
               ><v-card :color="active ? 'white' : 'white'" class="ma-4" :width="cardwidth" @click="toggle">
-                <v-img class="black--text align-end" max-width="320" :src="$api_base_url3 + '/scr/files/' + encodeURIComponent(r.ovr.filename) + '?t=' + new Date().getTime()"></v-img
+                <v-img class="black--text align-end" max-width="320" :src="$api_base_url + '/scr/files/' + encodeURIComponent(r.ovr.filename) + '?t=' + new Date().getTime()"></v-img
                 ><v-card-subtitle>{{ r.ovr.filename }}</v-card-subtitle>
                 <v-card-text class="caption"
                   >Used offset: (x,y) = ({{ r.used_offsetx }}x{{ r.used_offsety }}) <br />Original image with marked center of screen. Use to adjust offsetx and offsety.
                 </v-card-text>
                 <v-card-actions>
-                  <v-btn icon :href="$api_base_url3 + '/scr/files/' + encodeURIComponent(r.ovr.filename)">
+                  <v-btn icon :href="$api_base_url + '/scr/files/' + encodeURIComponent(r.ovr.filename)">
                     <v-icon>mdi-download</v-icon>
                   </v-btn></v-card-actions
                 ></v-card
@@ -130,7 +130,7 @@
                 <v-card-subtitle>{{ r.txt.filename }}</v-card-subtitle>
                 <v-card-text class="caption">ASCII version of S81 file. Use to check correct offset in order to match characters.</v-card-text>
                 <v-card-actions>
-                  <v-btn icon :href="$api_base_url3 + '/scr/files/' + encodeURIComponent(r.txt.filename)">
+                  <v-btn icon :href="$api_base_url + '/scr/files/' + encodeURIComponent(r.txt.filename)">
                     <v-icon>mdi-download</v-icon>
                   </v-btn></v-card-actions
                 ></v-card
@@ -220,7 +220,7 @@ export default {
       this.message = "";
       this.r = undefined;
 
-      UploadService.upload(this.currentFile, this.$api_base_url3, this.offsetx, this.offsety, this.zx80, (event) => {
+      UploadService.upload(this.currentFile, this.$api_base_url, this.offsetx, this.offsety, this.zx80, (event) => {
         this.progress = Math.round((100 * event.loaded) / event.total);
       })
         .then((response) => {

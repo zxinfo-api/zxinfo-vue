@@ -30,7 +30,7 @@
           <GameCard v-if="entry" v-bind:GameData="entry" v-bind:imagetype="imagetype"></GameCard>
           <v-card v-if="!entry" outlined>
             <ImageContainer
-              v-bind:entry="{ coverimage: 'https://zxinfo.dk/media/images/placeholder.png' }"
+              v-bind:entry="{ coverimage: '/media/images/placeholder.png' }"
               v-bind:imagetype="imagetype"
             ></ImageContainer>
             <v-card-title class="d-inline-block text-truncate" style="max-width: 100%;"> Not found in ZXDB</v-card-title></v-card

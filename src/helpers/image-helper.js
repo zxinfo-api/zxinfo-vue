@@ -19,7 +19,7 @@ var getScreenUrl = function (path) {
       "https://archive.org/download/World_of_Spectrum_June_2017_Mirror/World%20of%20Spectrum%20June%202017%20Mirror.zip/World%20of%20Spectrum%20June%202017%20Mirror/"+      encodeURIComponent(path)
     );
   }
-  return "https://zxinfo.dk/media" + path;
+  return "/media" + path;
 };
 
 /**
@@ -106,7 +106,7 @@ var getCoverImageForCompilation = function (gamedata) {
     console.log(`getCoverImageForCompilation() - Type: ${gamedata._source.contentType}(${gamedata._source.genreType})`);
   }
 
-  var screenurl = "https://zxinfo.dk/media/images/compilation.png";
+  var screenurl = "/images/compilation.png";
 
   // find one with title = null, usual an animated GIF with all entries
   const screenWithoutTitle = gamedata._source.screens.filter((item) => item.title === null).sort((a, b) => (a.url.toLowerCase() > b.url.toLowerCase() ? 1 : -1));
@@ -476,6 +476,6 @@ module.exports = {
   getCoverImage: getCoverImageForEntry,
   getScreenUrl: getScreenUrl,
   getScreens: getScreens,
-  DEFAULT_SRC: "https://zxinfo.dk/media/images/placeholder.png",
-  DEFAULT_PAPER_SRC: "https://zxinfo.dk/media/images/placeholderPaper.png",
+  DEFAULT_SRC: "/media/images/placeholder.png",
+  DEFAULT_PAPER_SRC: "/media/images/placeholderPaper.png",
 };

@@ -32,7 +32,7 @@
   >
 </template>
 <script>
-let media_url = "https://zxinfo.dk/media";
+let media_url = "/media";
 
 export default {
   name: "AnimatedLoadingScreens",
