@@ -118,8 +118,8 @@
     <v-footer app padless class="caption .font-weight-thin">
       <v-container fluid>
         <v-row justify="space-between" align="center" class="px-4">
-          <span>&copy; 2021 info@zxinfo.dk</span>
-          <span class="text-center"><a href="https://api.zxinfo.dk/v3/">Public API</a></span><span><a
+          <span>&copy; 2026 info@zxinfo.dk</span>
+          <span class="text-center"><a href="https://zxinfo-api.github.io/zxinfo-api-v5/">Public API</a></span><span><a
               href="https://github.com/thomasheckmann/zxinfo-vue">GitHub</a></span>
         </v-row></v-container>
     </v-footer>
