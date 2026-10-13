@@ -50,7 +50,7 @@ npm ci
 npm run serve
 ```
 
-The development server normally runs at <http://localhost:8080>. The frontend's development API target is currently hard-coded to `http://localhost:8300/v4` in `src/main.js`; the corresponding API service must be available locally for data-backed pages to work.
+The development server normally runs at <http://localhost:8080>. The frontend's development API target is currently hard-coded to `http://localhost:8201/v5` in `src/main.js`; the corresponding API service must be available locally for data-backed pages to work.
 
 ## Commands
 
@@ -60,7 +60,7 @@ npm run build  # Build the production site into dist/
 npm run lint   # Run the Vue CLI linter
 ```
 
-The production build uses Vue CLI's modern build mode. The API base URL is selected in `src/main.js`: development uses `http://localhost:8300/v4`, while production uses `http://api.zxinfo.klaptorsk.dk/v5`. These URLs are currently code constants, not runtime environment settings. Change the appropriate value and rebuild to target another API. If the frontend is served over HTTPS, use an HTTPS API endpoint as well; browsers block HTTP API requests from secure pages as mixed content.
+The production build uses Vue CLI's modern build mode. The API base URL is selected in `src/main.js`: development uses `http://localhost:8201/v5`, while production uses `http://api.zxinfo.klaptorsk.dk/v5`. These URLs are currently code constants, not runtime environment settings. Change the appropriate value and rebuild to target another API. If the frontend is served over HTTPS, use an HTTPS API endpoint as well; browsers block HTTP API requests from secure pages as mixed content.
 
 ## Docker
 

@@ -11,7 +11,7 @@ Vue.config.productionTip = false;
 Vue.prototype.$isDevelopment = process.env.NODE_ENV == "development";
 
 if (Vue.prototype.$isDevelopment) {
-  Vue.prototype.$api_base_url = "http://localhost:8300/v4";
+  Vue.prototype.$api_base_url = "http://localhost:8201/v5";
   // Vue.prototype.$api_base_url3 = "http://localhost:8300/v3";
 } else {
   Vue.prototype.$api_base_url = "http://api.zxinfo.klaptorsk.dk/v5";
