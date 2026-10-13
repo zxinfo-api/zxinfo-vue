@@ -120,7 +120,7 @@
         <v-row justify="space-between" align="center" class="px-4">
           <span>&copy; 2026 info@zxinfo.dk</span>
           <span class="text-center"><a href="https://zxinfo-api.github.io/zxinfo-api-v5/">Public API</a></span><span><a
-              href="https://github.com/thomasheckmann/zxinfo-vue">GitHub</a></span>
+              href="https://github.com/zxinfo-api/zxinfo-vue">GitHub</a></span>
         </v-row></v-container>
     </v-footer>
   </v-app>
