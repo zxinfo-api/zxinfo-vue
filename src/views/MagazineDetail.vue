@@ -6,7 +6,7 @@
           <v-spacer />
           <v-icon>{{ getMagazineTypeIcon(mag.type) }}</v-icon
           ><v-toolbar-title class="white--text"
-            >{{ mag.name }} - {{ mag.publisher }} ({{ mag.country }}), {{ mag.language }}
+            >X{{ mag.name }} - {{ mag.publisher }} ({{ mag.country }}), {{ mag.language }}
           </v-toolbar-title>
           <v-spacer />
         </v-toolbar> </v-col
