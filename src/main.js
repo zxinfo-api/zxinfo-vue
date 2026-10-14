@@ -15,7 +15,7 @@ if (Vue.prototype.$isDevelopment) {
   // Vue.prototype.$api_base_url3 = "http://localhost:8300/v3";
 } else {
   const apiServerName = process.env.VUE_APP_API_SERVER_NAME || "api.zxinfo.klaptorsk.dk";
-  Vue.prototype.$api_base_url = `http://${apiServerName}/v5`;
+  Vue.prototype.$api_base_url = `https://${apiServerName}/v5`;
   // Vue.prototype.$api_base_url3 = "https://api.zxinfo.dk/v3";
 }
 
