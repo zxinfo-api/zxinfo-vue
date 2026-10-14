@@ -4,6 +4,8 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN --mount=type=cache,target=/root/.npm npm ci --no-audit --no-fund
 COPY . .
+ARG API_SERVER_NAME
+ENV VUE_APP_API_SERVER_NAME=${API_SERVER_NAME}
 RUN npm run build
 
 # Production stage

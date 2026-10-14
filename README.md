@@ -60,7 +60,7 @@ npm run build  # Build the production site into dist/
 npm run lint   # Run the Vue CLI linter
 ```
 
-The production build uses Vue CLI's modern build mode. The API base URL is selected in `src/main.js`: development uses `http://localhost:8201/v5`, while production uses `http://api.zxinfo.klaptorsk.dk/v5`. These URLs are currently code constants, not runtime environment settings. Change the appropriate value and rebuild to target another API. If the frontend is served over HTTPS, use an HTTPS API endpoint as well; browsers block HTTP API requests from secure pages as mixed content.
+The production build uses Vue CLI's modern build mode. Development uses `http://localhost:8201/v5`; production builds use `API_SERVER_NAME` from the repository root `.env` file, passed to the frontend build by Compose. Standalone builds can set `VUE_APP_API_SERVER_NAME` or use the default `api.zxinfo.klaptorsk.dk`. If the frontend is served over HTTPS, configure the API URL to use HTTPS as well; browsers block HTTP API requests from secure pages as mixed content.
 
 ## Docker
 
