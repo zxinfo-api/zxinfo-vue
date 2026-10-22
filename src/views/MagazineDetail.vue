@@ -6,7 +6,7 @@
           <v-spacer />
           <v-icon>{{ getMagazineTypeIcon(mag.type) }}</v-icon
           ><v-toolbar-title class="white--text"
-            >X{{ mag.name }} - {{ mag.publisher }} ({{ mag.country }}), {{ mag.language }}
+            >{{ mag.name }} - {{ mag.publisher }} ({{ mag.country }}), {{ mag.language }}
           </v-toolbar-title>
           <v-spacer />
         </v-toolbar> </v-col
@@ -23,7 +23,7 @@
                 <div v-if="card.special">Special: {{ card.special }}</div>
               </v-card-subtitle>
               <v-card-actions>
-                <v-btn class="ml-2 mt-5" outlined rounded small :to="`/magazines/${mag.name}/issues/${card.id}`">
+                <v-btn class="ml-2 mt-5" outlined rounded small :to="`/magazines/${encodeURIComponent(mag.name)}/issues/${card.id}`">
                   Info
                 </v-btn></v-card-actions
               >
